@@ -2,6 +2,8 @@ package libs.java.extension.collections.observable;
 
 /**
  * 
+ * Listener to be implemented by classes to listen for various events,
+ * {@link NotificationEventType}.
  * 
  * @author Kuldeep
  *

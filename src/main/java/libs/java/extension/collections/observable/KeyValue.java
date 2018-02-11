@@ -1,5 +1,14 @@
 package libs.java.extension.collections.observable;
 
+/**
+ * Used to forward notification in case of map (without creating too many
+ * interface, it fixes notification data contained in this bean with key-value
+ * 
+ * @author Kuldeep
+ *
+ * @param <K>
+ * @param <V>
+ */
 public class KeyValue<K, V> {
 	private K key;
 	private V value;

@@ -1,4 +1,5 @@
 package libs.java.extension.collections.observable;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -16,6 +17,24 @@ import libs.java.extension.collections.observable.notifier.DeleteNotifier;
 import libs.java.extension.collections.observable.notifier.ModifyNotifier;
 import libs.java.extension.collections.observable.notifier.NotifierAgent;
 
+/**
+ * Observable map. Usage <br>
+ * Map<String, String> a = new NotificationMap<>(new HashMap<>(), null, new
+ * NotificationListener<KeyValue<String, String>>() {
+ * 
+ * @Override public void onEvent(NotificationEvent<KeyValue<String, String>>
+ *           event) { System.err.println(event.getElement()); }
+ * 
+ *           }); 
+ *           a.put ("ABC", "DEF");
+ *           </br>
+  * NOTE - As of now, no event generated on stream based operation.
+            
+ * @author Kuldeep
+ *
+ * @param <K>
+ * @param <V>
+ */
 public class NotificationMap<K, V> implements Map<K, V> {
 
 	protected boolean RETAIN_METHOD_COPY_ENABLED = true;

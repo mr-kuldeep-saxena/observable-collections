@@ -6,8 +6,10 @@ import java.util.List;
 import java.util.concurrent.Executor;
 
 /**
- * base class with methods to ignore creating copy for event. It is not
+ * Base class with methods to ignore creating copy for event. It is not
  * implementation of{@link Collection}
+ * 
+ * NOTE - As of now, no event generated on stream based operation.
  * 
  * @author Kuldeep
  *

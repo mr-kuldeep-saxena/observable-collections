@@ -3,13 +3,17 @@ import libs.java.extension.collections.observable.NotificationEvent;
 import libs.java.extension.collections.observable.NotificationListener;
 import libs.java.extension.collections.observable.NotificationListener.NotificationEventType;
 
+/**
+ * Read event notifier (Single element)
+ * @author Kuldeep
+ *
+ * @param <E>
+ */
 public class ReadNotifier< E> implements Notifier< E> {
 
-	//private Collection<E> collection;
 	private E element;
 
-	public ReadNotifier(/*Collection<E> collection,*/ E element) {
-//		this.collection = collection;
+	public ReadNotifier(E element) {
 		this.element = element;
 	}
 

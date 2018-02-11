@@ -3,6 +3,12 @@ import libs.java.extension.collections.observable.NotificationEvent;
 import libs.java.extension.collections.observable.NotificationListener;
 import libs.java.extension.collections.observable.NotificationListener.NotificationEventType;
 
+/**
+ * Add event notifier
+ * @author Kuldeep
+ *
+ * @param <E>
+ */
 public class AddNotifier<E> implements Notifier<E> {
 
 	private E e;

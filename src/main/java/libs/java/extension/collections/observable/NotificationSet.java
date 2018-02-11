@@ -18,6 +18,26 @@ import libs.java.extension.collections.observable.notifier.DeleteNotifier;
 import libs.java.extension.collections.observable.notifier.ModifyNotifier;
 import libs.java.extension.collections.observable.notifier.NotifierAgent;
 
+/**
+ * Observable Set.
+ * Sample usage -
+ * 	Set<String> a = new NotificationSet<String>(new HashSet<String>(),null,
+				new NotificationListener<String>() {
+
+					@Override
+					public void onEvent(NotificationEvent<String> event) {
+						System.err.println(event.getElement());
+					}
+
+				});
+				a.add ("ABC");
+  * NOTE - As of now, no event generated on stream based operation.
+ 
+ * 
+ * @author Kuldeep
+ *
+ * @param <E>
+ */
 public class NotificationSet<E> extends NotificationCollection<E> implements Set<E> {
 
 	/**

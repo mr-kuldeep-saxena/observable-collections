@@ -1,4 +1,5 @@
 package libs.java.extension.collections.observable;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -22,6 +23,17 @@ import libs.java.extension.collections.observable.notifier.ReadNotifier;
 /**
  * A decorated List which allows notification on different list operation.
  * Simple usage is <br>
+ * List<String> a = new NotificationList<>(new ArrayList<>(), null, new
+ * NotificationListener<String>() {
+ * 
+ * @Override public void onEvent(NotificationEvent<String> event) {
+ *           System.err.println(event.getElement()); }
+ * 
+ *           }); a.add ("ABC");
+ * 
+ * 
+ * NOTE - As of now, no event generated on stream based operation.
+ *
  * 
  * @author Kuldeep
  *
@@ -93,8 +105,6 @@ public class NotificationList<E> extends NotificationCollection<E> implements Li
 	public List<E> getList() {
 		return list;
 	}
-
-	
 
 	/**
 	 * Add element to the list, and notifies listener for Add event.

@@ -3,13 +3,17 @@ import libs.java.extension.collections.observable.NotificationEvent;
 import libs.java.extension.collections.observable.NotificationListener;
 import libs.java.extension.collections.observable.NotificationListener.NotificationEventType;
 
+/**
+ * Modify event notifier
+ * @author Kuldeep
+ *
+ * @param <E>
+ */
 public class ModifyNotifier<E> implements Notifier<E> {
 
-//	private Collection<E> collection;
 	private E oldElement, newElement;
 
-	public ModifyNotifier(/*Collection<E> collection,*/ E oldElement, E newElement) {
-	//	this.collection = collection;
+	public ModifyNotifier( E oldElement, E newElement) {
 		this.oldElement = oldElement;
 		this.newElement = newElement;
 

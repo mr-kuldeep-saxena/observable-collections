@@ -17,6 +17,27 @@ import libs.java.extension.collections.observable.notifier.DeleteNotifier;
 import libs.java.extension.collections.observable.notifier.NotifierAgent;
 import libs.java.extension.collections.observable.notifier.ReadNotifier;
 
+/**
+ * Observable Queue. 
+ * Sample usage -
+ * <br>
+ * Queue<String> a = new NotificationQueue<String>(new LinkedList<String>(),null,
+				new NotificationListener<String>() {
+
+					@Override
+					public void onEvent(NotificationEvent<String> event) {
+						System.err.println(event.getElement());
+					}
+
+				});
+				a.add ("ABC");
+				</br>
+ * NOTE - As of now, no event generated on stream based operation.
+ 				
+ * @author Kuldeep
+ *
+ * @param <E>
+ */
 public class NotificationQueue<E> extends NotificationCollection<E> implements Queue<E> {
 
 	/**

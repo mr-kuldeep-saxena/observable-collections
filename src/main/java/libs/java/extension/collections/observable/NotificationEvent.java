@@ -4,6 +4,7 @@ import java.util.Collection;
 import libs.java.extension.collections.observable.NotificationListener.NotificationEventType;
 
 /**
+ * Notification event, different values available at different type of notification
  * 
  * @author Kuldeep
  *
@@ -11,12 +12,28 @@ import libs.java.extension.collections.observable.NotificationListener.Notificat
  */
 public class NotificationEvent<E> {
 
+	/**
+	 * Only available in single element event.
+	 * Current element in add/delete notification, new element in case of modify.
+	 */
 	private E element;
+	/**
+	 * Only available when event is of multi type
+	 */
 	private Collection<? extends E> elements;
+	/**
+	 * type of event
+	 */
 	private NotificationEventType type;
+	/**
+	 * Available in modify event. old value of element
+	 */
 	private E oldElement;
 	// private Collection<E> underlyingCollection;
 
+	/**
+	 * if event change multiple elements
+	 */
 	private boolean multi = false;
 
 	public boolean isAdd() {

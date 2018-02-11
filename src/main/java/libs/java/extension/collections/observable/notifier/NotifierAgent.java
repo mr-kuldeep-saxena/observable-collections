@@ -5,6 +5,12 @@ import java.util.concurrent.Executor;
 
 import libs.java.extension.collections.observable.NotificationListener;
 
+/**
+ * Agent, which propogates event to listener using different notifier
+ * 
+ * @author Kuldeep
+ *
+ */
 public class NotifierAgent {
 
 	private static final NotifierAgent agent = new NotifierAgent();
